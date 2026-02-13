@@ -25,12 +25,7 @@ export function useWorkflowManager() {
   }
 
   function undo() {
-    const current = {
-      nodes: cloneDeep(getNodes.value),
-      edges: cloneDeep(getEdges.value),
-    } as WorkflowSnapshot;
-
-    const previous = history.undo(current)
+    const previous = history.undo()
     if (!previous) return
 
     setNodes(previous.nodes)
@@ -38,12 +33,7 @@ export function useWorkflowManager() {
   }
 
   function redo() {
-    const current = {
-      nodes: cloneDeep(getNodes.value),
-      edges: cloneDeep(getEdges.value),
-    } as WorkflowSnapshot;
-
-    const next = history.redo(current)
+    const next = history.redo()
     if (!next) return
 
     setNodes(next.nodes)

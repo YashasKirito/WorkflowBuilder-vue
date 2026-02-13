@@ -26,22 +26,22 @@ export function useWorkflowHistory(limit = 50) {
 
   const pushDebounced = debounce(push, 1000)
 
-  function undo(current: WorkflowSnapshot) {
-    if (!past.value.length) return null
+  function undo() {
+    if (past.value.length < 2) return null
 
-    const previous = past.value.pop()!
-    future.value.push(current)
+    const present = past.value.pop()!
+    future.value.push(present)
 
     console.log('[History] Undo triggered')
 
-    return previous
+    return past.value[past.value.length - 1]
   }
 
-  function redo(current: WorkflowSnapshot) {
+  function redo() {
     if (!future.value.length) return null
 
     const next = future.value.pop()!
-    past.value.push(current)
+    past.value.push(next)
 
     console.log('[History] Redo triggered')
 
