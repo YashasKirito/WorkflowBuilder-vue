@@ -1,0 +1,3850 @@
+{
+  "version": 1,
+  "exportedAt": "2026-02-13T10:56:46.876Z",
+  "nodes": [
+    {
+      "id": "0.2261065246314431",
+      "type": "trigger",
+      "dimensions": {
+        "width": 198,
+        "height": 58
+      },
+      "computedPosition": {
+        "x": 553,
+        "y": -55,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.2261065246314431",
+            "position": "bottom",
+            "x": 96.1171875,
+            "y": 55,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": null
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 553,
+        "y": -55
+      },
+      "data": {
+        "label": "Webhook Trigger",
+        "configuration": {
+          "event": {
+            "id": "event",
+            "label": "Event",
+            "type": "select",
+            "options": [
+              "lead_created",
+              "lead_updated",
+              "lead_deleted",
+              "cart_created",
+              "cart_updated",
+              "cart_deleted",
+              "order_created",
+              "order_updated",
+              "order_deleted"
+            ],
+            "value": "cart_created"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.9459942002659527",
+      "type": "logic",
+      "dimensions": {
+        "width": 194,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 554.5,
+        "y": 96,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": "True",
+            "type": "source",
+            "nodeId": "0.9459942002659527",
+            "position": "left",
+            "x": -3,
+            "y": 18,
+            "width": 6,
+            "height": 6
+          },
+          {
+            "id": "False",
+            "type": "source",
+            "nodeId": "0.9459942002659527",
+            "position": "right",
+            "x": 191.0390625,
+            "y": 18,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.9459942002659527",
+            "position": "top",
+            "x": 94.015625,
+            "y": -3,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 554.5,
+        "y": 96
+      },
+      "data": {
+        "label": "Condition Check",
+        "configuration": {
+          "variable": {
+            "id": "variable",
+            "label": "Variable",
+            "type": "text",
+            "value": "data.item_stock"
+          },
+          "operator": {
+            "id": "operator",
+            "label": "Operator",
+            "type": "select",
+            "options": [
+              "equals",
+              "contains",
+              "starts_with",
+              "greater_than",
+              "less_than"
+            ],
+            "value": "greater_than"
+          },
+          "targetValue": {
+            "id": "targetValue",
+            "label": "Target Value",
+            "type": "text",
+            "value": "0"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.09369392528252685",
+      "type": "action",
+      "dimensions": {
+        "width": 154,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 355.90406630560074,
+        "y": 205.65245613667977,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.09369392528252685",
+            "position": "bottom",
+            "x": 74.07803565456967,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.09369392528252685",
+            "position": "top",
+            "x": 74.07803565456967,
+            "y": -3.000001522041929,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 355.90406630560074,
+        "y": 205.65245613667977
+      },
+      "data": {
+        "label": "Send Email",
+        "configuration": {
+          "recipient": {
+            "id": "recipient",
+            "label": "Recipient Email",
+            "type": "text",
+            "value": "data.email"
+          },
+          "subject": {
+            "id": "subject",
+            "label": "Subject",
+            "type": "text",
+            "value": "Reminder #1"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.051743973315051095",
+      "type": "utility",
+      "dimensions": {
+        "width": 114,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 371.1684366744211,
+        "y": 322.947091602352,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.051743973315051095",
+            "position": "bottom",
+            "x": 54.22647036154427,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.051743973315051095",
+            "position": "top",
+            "x": 54.22647036154427,
+            "y": -3.000001522041929,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 371.1684366744211,
+        "y": 322.947091602352
+      },
+      "data": {
+        "label": "Delay",
+        "configuration": {
+          "delay": {
+            "id": "delay",
+            "label": "Delay",
+            "type": "number",
+            "value": 2
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.8709387294568137",
+      "type": "logic",
+      "dimensions": {
+        "width": 194,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 331.80242888114753,
+        "y": 447.47221829536016,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": "True",
+            "type": "source",
+            "nodeId": "0.8709387294568137",
+            "position": "left",
+            "x": -3.000001522041929,
+            "y": 18.000009132251574,
+            "width": 6,
+            "height": 6
+          },
+          {
+            "id": "False",
+            "type": "source",
+            "nodeId": "0.8709387294568137",
+            "position": "right",
+            "x": 191.0388180945868,
+            "y": 18.000009132251574,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.8709387294568137",
+            "position": "top",
+            "x": 94.0155100152242,
+            "y": -3.000001522041929,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 331.80242888114753,
+        "y": 447.47221829536016
+      },
+      "data": {
+        "label": "Condition Check",
+        "configuration": {
+          "variable": {
+            "id": "variable",
+            "label": "Variable",
+            "type": "text",
+            "value": "cart.purchased"
+          },
+          "operator": {
+            "id": "operator",
+            "label": "Operator",
+            "type": "select",
+            "options": [
+              "equals",
+              "contains",
+              "starts_with",
+              "greater_than",
+              "less_than"
+            ],
+            "value": "equals"
+          },
+          "targetValue": {
+            "id": "targetValue",
+            "label": "Target Value",
+            "type": "text",
+            "value": "true"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.3497696012013497",
+      "type": "action",
+      "dimensions": {
+        "width": 154,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 204.8671384456941,
+        "y": 536.648276765837,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.3497696012013497",
+            "position": "bottom",
+            "x": 74.07803565456967,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.3497696012013497",
+            "position": "top",
+            "x": 74.07803565456967,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 204.8671384456941,
+        "y": 536.648276765837
+      },
+      "data": {
+        "label": "Send Email",
+        "configuration": {
+          "recipient": {
+            "id": "recipient",
+            "label": "Recipient Email",
+            "type": "text",
+            "value": "data.email"
+          },
+          "subject": {
+            "id": "subject",
+            "label": "Subject",
+            "type": "text",
+            "value": "thank you for your purchase"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.4303014266554237",
+      "type": "utility",
+      "dimensions": {
+        "width": 125,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 221.73828464281132,
+        "y": 631.4480506353528,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.4303014266554237",
+            "position": "bottom",
+            "x": 59.49992394497703,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.4303014266554237",
+            "position": "top",
+            "x": 59.49992394497703,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 221.73828464281132,
+        "y": 631.4480506353528
+      },
+      "data": {
+        "label": "Logger",
+        "configuration": {
+          "logLevel": {
+            "id": "logLevel",
+            "label": "Log Level",
+            "type": "select",
+            "options": [
+              "info",
+              "warn",
+              "error"
+            ],
+            "value": "info"
+          },
+          "message": {
+            "id": "message",
+            "label": "Log Message",
+            "type": "text",
+            "value": "Purchase completed"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.7050314396023853",
+      "type": "action",
+      "dimensions": {
+        "width": 149,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 537.469734903148,
+        "y": 562.356690018587,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.7050314396023853",
+            "position": "bottom",
+            "x": 71.43741059180506,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.7050314396023853",
+            "position": "top",
+            "x": 71.43741059180506,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 537.469734903148,
+        "y": 562.356690018587
+      },
+      "data": {
+        "label": "Send SMS",
+        "configuration": {
+          "recipient": {
+            "id": "recipient",
+            "label": "Recipient Phone Number",
+            "type": "text",
+            "value": "data.phone"
+          },
+          "message": {
+            "id": "message",
+            "label": "Message",
+            "type": "text",
+            "value": "Buy Now"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.4775828514502246",
+      "type": "action",
+      "dimensions": {
+        "width": 179,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 521.4019766201793,
+        "y": 665.1903430295872,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.4775828514502246",
+            "position": "bottom",
+            "x": 86.38274433762744,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.4775828514502246",
+            "position": "top",
+            "x": 86.38274433762744,
+            "y": -3.000001522041929,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 521.4019766201793,
+        "y": 665.1903430295872
+      },
+      "data": {
+        "label": "HTTP Request",
+        "configuration": {
+          "url": {
+            "id": "url",
+            "label": "URL",
+            "type": "select",
+            "options": [
+              "get_inventory",
+              "get_orders",
+              "add_lead_to_crm",
+              "create_offer",
+              "hold_inventory",
+              "release_inventory"
+            ],
+            "value": "create_offer"
+          },
+          "method": {
+            "id": "method",
+            "label": "Method",
+            "type": "select",
+            "options": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "value": "GET"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.9217973752949947",
+      "type": "action",
+      "dimensions": {
+        "width": 154,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 526.2223041050701,
+        "y": 804.1764521772673,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.9217973752949947",
+            "position": "bottom",
+            "x": 74.07793758485776,
+            "y": 38.99992171683317,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.9217973752949947",
+            "position": "top",
+            "x": 74.07793758485776,
+            "y": -3.000001522041929,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 526.2223041050701,
+        "y": 804.1764521772673
+      },
+      "data": {
+        "label": "Send Email",
+        "configuration": {
+          "recipient": {
+            "id": "recipient",
+            "label": "Recipient Email",
+            "type": "text",
+            "value": "data.email"
+          },
+          "subject": {
+            "id": "subject",
+            "label": "Subject",
+            "type": "text",
+            "value": "Buy with this code"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.10673838032585747",
+      "type": "utility",
+      "dimensions": {
+        "width": 114,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 551.1273294436717,
+        "y": 924.6846392995334,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.10673838032585747",
+            "position": "bottom",
+            "x": 54.22647036154427,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.10673838032585747",
+            "position": "top",
+            "x": 54.22647036154427,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 551.1273294436717,
+        "y": 924.6846392995334
+      },
+      "data": {
+        "label": "Delay",
+        "configuration": {
+          "delay": {
+            "id": "delay",
+            "label": "Delay",
+            "type": "number",
+            "value": 24
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.8014277378497972",
+      "type": "logic",
+      "dimensions": {
+        "width": 194,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 494.8901754532808,
+        "y": 1044.3894385076508,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": "True",
+            "type": "source",
+            "nodeId": "0.8014277378497972",
+            "position": "left",
+            "x": -2.9999524871859764,
+            "y": 18.000009132251574,
+            "width": 6,
+            "height": 6
+          },
+          {
+            "id": "False",
+            "type": "source",
+            "nodeId": "0.8014277378497972",
+            "position": "right",
+            "x": 191.0389161642987,
+            "y": 18.000009132251574,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.8014277378497972",
+            "position": "top",
+            "x": 94.0155100152242,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 494.8901754532808,
+        "y": 1044.3894385076508
+      },
+      "data": {
+        "label": "Condition Check",
+        "configuration": {
+          "variable": {
+            "id": "variable",
+            "label": "Variable",
+            "type": "text",
+            "value": "cart.purchased"
+          },
+          "operator": {
+            "id": "operator",
+            "label": "Operator",
+            "type": "select",
+            "options": [
+              "equals",
+              "contains",
+              "starts_with",
+              "greater_than",
+              "less_than"
+            ],
+            "value": "equals"
+          },
+          "targetValue": {
+            "id": "targetValue",
+            "label": "Target Value",
+            "type": "text",
+            "value": "true"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.5089518494850644",
+      "type": "action",
+      "dimensions": {
+        "width": 179,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 357.5108421338976,
+        "y": 1151.2400310893931,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.5089518494850644",
+            "position": "bottom",
+            "x": 86.38274433762744,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.5089518494850644",
+            "position": "top",
+            "x": 86.38274433762744,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 357.5108421338976,
+        "y": 1151.2400310893931
+      },
+      "data": {
+        "label": "HTTP Request",
+        "configuration": {
+          "url": {
+            "id": "url",
+            "label": "URL",
+            "type": "select",
+            "options": [
+              "get_inventory",
+              "get_orders",
+              "add_lead_to_crm",
+              "create_offer",
+              "hold_inventory",
+              "release_inventory"
+            ],
+            "value": "release_inventory"
+          },
+          "method": {
+            "id": "method",
+            "label": "Method",
+            "type": "select",
+            "options": [
+              "GET",
+              "POST",
+              "PUT",
+              "DELETE"
+            ],
+            "value": "GET"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.48226549767816507",
+      "type": "utility",
+      "dimensions": {
+        "width": 125,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 724.6591188997345,
+        "y": 1162.4874618874715,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.48226549767816507",
+            "position": "bottom",
+            "x": 59.49997297983298,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.48226549767816507",
+            "position": "top",
+            "x": 59.49997297983298,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 724.6591188997345,
+        "y": 1162.4874618874715
+      },
+      "data": {
+        "label": "Logger",
+        "configuration": {
+          "logLevel": {
+            "id": "logLevel",
+            "label": "Log Level",
+            "type": "select",
+            "options": [
+              "info",
+              "warn",
+              "error"
+            ],
+            "value": "info"
+          },
+          "message": {
+            "id": "message",
+            "label": "Log Message",
+            "type": "text",
+            "value": "dead lead"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.15681468740859184",
+      "type": "action",
+      "dimensions": {
+        "width": 154,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 360.7243937904913,
+        "y": 1277.3719336106983,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.15681468740859184",
+            "position": "bottom",
+            "x": 74.07803565456967,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.15681468740859184",
+            "position": "top",
+            "x": 74.07803565456967,
+            "y": -2.9999524871859764,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 360.7243937904913,
+        "y": 1277.3719336106983
+      },
+      "data": {
+        "label": "Send Email",
+        "configuration": {
+          "recipient": {
+            "id": "recipient",
+            "label": "Recipient Email",
+            "type": "text",
+            "value": "data.email"
+          },
+          "subject": {
+            "id": "subject",
+            "label": "Subject",
+            "type": "text",
+            "value": "thank you for your purchase"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.909863749388637",
+      "type": "utility",
+      "dimensions": {
+        "width": 125,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 371.9718245885696,
+        "y": 1434.8359647837924,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.909863749388637",
+            "position": "bottom",
+            "x": 59.49997297983298,
+            "y": 38.999970751689126,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.909863749388637",
+            "position": "top",
+            "x": 59.49997297983298,
+            "y": -3.000050556897882,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 371.9718245885696,
+        "y": 1434.8359647837924
+      },
+      "data": {
+        "label": "Logger",
+        "configuration": {
+          "logLevel": {
+            "id": "logLevel",
+            "label": "Log Level",
+            "type": "select",
+            "options": [
+              "info",
+              "warn",
+              "error"
+            ],
+            "value": "info"
+          },
+          "message": {
+            "id": "message",
+            "label": "Log Message",
+            "type": "text",
+            "value": "Purchase completed"
+          }
+        }
+      },
+      "events": {}
+    },
+    {
+      "id": "0.8115461688244775",
+      "type": "utility",
+      "dimensions": {
+        "width": 125,
+        "height": 42
+      },
+      "computedPosition": {
+        "x": 797.853202392496,
+        "y": 200.04592618398755,
+        "z": 0
+      },
+      "handleBounds": {
+        "source": [
+          {
+            "id": null,
+            "type": "source",
+            "nodeId": "0.8115461688244775",
+            "position": "bottom",
+            "x": 59.49995357534487,
+            "y": 39.000001519636164,
+            "width": 6,
+            "height": 6
+          }
+        ],
+        "target": [
+          {
+            "id": null,
+            "type": "target",
+            "nodeId": "0.8115461688244775",
+            "position": "top",
+            "x": 59.49995357534487,
+            "y": -2.999997357853142,
+            "width": 6,
+            "height": 6
+          }
+        ]
+      },
+      "selected": false,
+      "dragging": false,
+      "resizing": false,
+      "initialized": false,
+      "isParent": false,
+      "position": {
+        "x": 797.853202392496,
+        "y": 200.04592618398755
+      },
+      "data": {
+        "label": "Logger",
+        "configuration": {
+          "logLevel": {
+            "id": "logLevel",
+            "label": "Log Level",
+            "type": "select",
+            "options": [
+              "info",
+              "warn",
+              "error"
+            ],
+            "value": "warn"
+          },
+          "message": {
+            "id": "message",
+            "label": "Log Message",
+            "type": "text",
+            "value": "Out of inventory"
+          }
+        }
+      },
+      "events": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "vueflow__edge-0.2261065246314431-0.9459942002659527",
+      "type": "default",
+      "source": "0.2261065246314431",
+      "target": "0.9459942002659527",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.2261065246314431",
+        "type": "trigger",
+        "dimensions": {
+          "width": 198,
+          "height": 58
+        },
+        "computedPosition": {
+          "x": 553,
+          "y": -55,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.2261065246314431",
+              "position": "bottom",
+              "x": 96.1171875,
+              "y": 55,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": null
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 553,
+          "y": -55
+        },
+        "data": {
+          "label": "Webhook Trigger",
+          "configuration": {
+            "event": {
+              "id": "event",
+              "label": "Event",
+              "type": "select",
+              "options": [
+                "lead_created",
+                "lead_updated",
+                "lead_deleted",
+                "cart_created",
+                "cart_updated",
+                "cart_deleted",
+                "order_created",
+                "order_updated",
+                "order_deleted"
+              ],
+              "value": "cart_created"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.9459942002659527",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 554.5,
+          "y": 96,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.9459942002659527",
+              "position": "left",
+              "x": -3,
+              "y": 18,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.9459942002659527",
+              "position": "right",
+              "x": 191.0390625,
+              "y": 18,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.9459942002659527",
+              "position": "top",
+              "x": 94.015625,
+              "y": -3,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 554.5,
+          "y": 96
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "data.item_stock"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "greater_than"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "0"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 652.1171875,
+      "sourceY": 6,
+      "targetX": 651.515625,
+      "targetY": 93
+    },
+    {
+      "id": "vueflow__edge-0.9459942002659527True-0.09369392528252685",
+      "type": "default",
+      "source": "0.9459942002659527",
+      "target": "0.09369392528252685",
+      "sourceHandle": "True",
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "True",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.9459942002659527",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 554.5,
+          "y": 96,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.9459942002659527",
+              "position": "left",
+              "x": -3,
+              "y": 18,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.9459942002659527",
+              "position": "right",
+              "x": 191.0390625,
+              "y": 18,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.9459942002659527",
+              "position": "top",
+              "x": 94.015625,
+              "y": -3,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 554.5,
+          "y": 96
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "data.item_stock"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "greater_than"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "0"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.09369392528252685",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 355.90406630560074,
+          "y": 205.65245613667977,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.09369392528252685",
+              "position": "bottom",
+              "x": 74.07803565456967,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.09369392528252685",
+              "position": "top",
+              "x": 74.07803565456967,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 355.90406630560074,
+          "y": 205.65245613667977
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "Reminder #1"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 551.5,
+      "sourceY": 117,
+      "targetX": 432.98210196017044,
+      "targetY": 202.65245461463783
+    },
+    {
+      "id": "vueflow__edge-0.09369392528252685-0.051743973315051095",
+      "type": "default",
+      "source": "0.09369392528252685",
+      "target": "0.051743973315051095",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.09369392528252685",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 355.90406630560074,
+          "y": 205.65245613667977,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.09369392528252685",
+              "position": "bottom",
+              "x": 74.07803565456967,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.09369392528252685",
+              "position": "top",
+              "x": 74.07803565456967,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 355.90406630560074,
+          "y": 205.65245613667977
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "Reminder #1"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.051743973315051095",
+        "type": "utility",
+        "dimensions": {
+          "width": 114,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 371.1684366744211,
+          "y": 322.947091602352,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.051743973315051095",
+              "position": "bottom",
+              "x": 54.22647036154427,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.051743973315051095",
+              "position": "top",
+              "x": 54.22647036154427,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 371.1684366744211,
+          "y": 322.947091602352
+        },
+        "data": {
+          "label": "Delay",
+          "configuration": {
+            "delay": {
+              "id": "delay",
+              "label": "Delay",
+              "type": "number",
+              "value": 2
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 432.98210196017044,
+      "sourceY": 250.6524268883689,
+      "targetX": 428.3949070359654,
+      "targetY": 319.94709008031003
+    },
+    {
+      "id": "vueflow__edge-0.051743973315051095-0.8709387294568137",
+      "type": "default",
+      "source": "0.051743973315051095",
+      "target": "0.8709387294568137",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.051743973315051095",
+        "type": "utility",
+        "dimensions": {
+          "width": 114,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 371.1684366744211,
+          "y": 322.947091602352,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.051743973315051095",
+              "position": "bottom",
+              "x": 54.22647036154427,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.051743973315051095",
+              "position": "top",
+              "x": 54.22647036154427,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 371.1684366744211,
+          "y": 322.947091602352
+        },
+        "data": {
+          "label": "Delay",
+          "configuration": {
+            "delay": {
+              "id": "delay",
+              "label": "Delay",
+              "type": "number",
+              "value": 2
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.8709387294568137",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 331.80242888114753,
+          "y": 447.47221829536016,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.8709387294568137",
+              "position": "left",
+              "x": -3.000001522041929,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.8709387294568137",
+              "position": "right",
+              "x": 191.0388180945868,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.8709387294568137",
+              "position": "top",
+              "x": 94.0155100152242,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 331.80242888114753,
+          "y": 447.47221829536016
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "cart.purchased"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "equals"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "true"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 428.3949070359654,
+      "sourceY": 367.9470623540411,
+      "targetX": 428.81793889637174,
+      "targetY": 444.4722167733182
+    },
+    {
+      "id": "vueflow__edge-0.8709387294568137True-0.3497696012013497",
+      "type": "default",
+      "source": "0.8709387294568137",
+      "target": "0.3497696012013497",
+      "sourceHandle": "True",
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "True",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.8709387294568137",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 331.80242888114753,
+          "y": 447.47221829536016,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.8709387294568137",
+              "position": "left",
+              "x": -3.000001522041929,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.8709387294568137",
+              "position": "right",
+              "x": 191.0388180945868,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.8709387294568137",
+              "position": "top",
+              "x": 94.0155100152242,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 331.80242888114753,
+          "y": 447.47221829536016
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "cart.purchased"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "equals"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "true"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.3497696012013497",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 204.8671384456941,
+          "y": 536.648276765837,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.3497696012013497",
+              "position": "bottom",
+              "x": 74.07803565456967,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.3497696012013497",
+              "position": "top",
+              "x": 74.07803565456967,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 204.8671384456941,
+          "y": 536.648276765837
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "thank you for your purchase"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 328.8024273591056,
+      "sourceY": 468.47222742761176,
+      "targetX": 281.9451741002638,
+      "targetY": 533.648324278651
+    },
+    {
+      "id": "vueflow__edge-0.3497696012013497-0.4303014266554237",
+      "type": "default",
+      "source": "0.3497696012013497",
+      "target": "0.4303014266554237",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.3497696012013497",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 204.8671384456941,
+          "y": 536.648276765837,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.3497696012013497",
+              "position": "bottom",
+              "x": 74.07803565456967,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.3497696012013497",
+              "position": "top",
+              "x": 74.07803565456967,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 204.8671384456941,
+          "y": 536.648276765837
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "thank you for your purchase"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.4303014266554237",
+        "type": "utility",
+        "dimensions": {
+          "width": 125,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 221.73828464281132,
+          "y": 631.4480506353528,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.4303014266554237",
+              "position": "bottom",
+              "x": 59.49992394497703,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.4303014266554237",
+              "position": "top",
+              "x": 59.49992394497703,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 221.73828464281132,
+          "y": 631.4480506353528
+        },
+        "data": {
+          "label": "Logger",
+          "configuration": {
+            "logLevel": {
+              "id": "logLevel",
+              "label": "Log Level",
+              "type": "select",
+              "options": [
+                "info",
+                "warn",
+                "error"
+              ],
+              "value": "info"
+            },
+            "message": {
+              "id": "message",
+              "label": "Log Message",
+              "type": "text",
+              "value": "Purchase completed"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 281.9451741002638,
+      "sourceY": 581.6482475175261,
+      "targetX": 284.23820858778834,
+      "targetY": 628.4480981481669
+    },
+    {
+      "id": "vueflow__edge-0.8709387294568137False-0.7050314396023853",
+      "type": "default",
+      "source": "0.8709387294568137",
+      "target": "0.7050314396023853",
+      "sourceHandle": "False",
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "False",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.8709387294568137",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 331.80242888114753,
+          "y": 447.47221829536016,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.8709387294568137",
+              "position": "left",
+              "x": -3.000001522041929,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.8709387294568137",
+              "position": "right",
+              "x": 191.0388180945868,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.8709387294568137",
+              "position": "top",
+              "x": 94.0155100152242,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 331.80242888114753,
+          "y": 447.47221829536016
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "cart.purchased"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "equals"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "true"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.7050314396023853",
+        "type": "action",
+        "dimensions": {
+          "width": 149,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 537.469734903148,
+          "y": 562.356690018587,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.7050314396023853",
+              "position": "bottom",
+              "x": 71.43741059180506,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.7050314396023853",
+              "position": "top",
+              "x": 71.43741059180506,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 537.469734903148,
+          "y": 562.356690018587
+        },
+        "data": {
+          "label": "Send SMS",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Phone Number",
+              "type": "text",
+              "value": "data.phone"
+            },
+            "message": {
+              "id": "message",
+              "label": "Message",
+              "type": "text",
+              "value": "Buy Now"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 528.8412469757343,
+      "sourceY": 468.47222742761176,
+      "targetX": 611.907145494953,
+      "targetY": 559.356737531401
+    },
+    {
+      "id": "vueflow__edge-0.7050314396023853-0.4775828514502246",
+      "type": "default",
+      "source": "0.7050314396023853",
+      "target": "0.4775828514502246",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.7050314396023853",
+        "type": "action",
+        "dimensions": {
+          "width": 149,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 537.469734903148,
+          "y": 562.356690018587,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.7050314396023853",
+              "position": "bottom",
+              "x": 71.43741059180506,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.7050314396023853",
+              "position": "top",
+              "x": 71.43741059180506,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 537.469734903148,
+          "y": 562.356690018587
+        },
+        "data": {
+          "label": "Send SMS",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Phone Number",
+              "type": "text",
+              "value": "data.phone"
+            },
+            "message": {
+              "id": "message",
+              "label": "Message",
+              "type": "text",
+              "value": "Buy Now"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.4775828514502246",
+        "type": "action",
+        "dimensions": {
+          "width": 179,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 521.4019766201793,
+          "y": 665.1903430295872,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.4775828514502246",
+              "position": "bottom",
+              "x": 86.38274433762744,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.4775828514502246",
+              "position": "top",
+              "x": 86.38274433762744,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 521.4019766201793,
+          "y": 665.1903430295872
+        },
+        "data": {
+          "label": "HTTP Request",
+          "configuration": {
+            "url": {
+              "id": "url",
+              "label": "URL",
+              "type": "select",
+              "options": [
+                "get_inventory",
+                "get_orders",
+                "add_lead_to_crm",
+                "create_offer",
+                "hold_inventory",
+                "release_inventory"
+              ],
+              "value": "create_offer"
+            },
+            "method": {
+              "id": "method",
+              "label": "Method",
+              "type": "select",
+              "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+              ],
+              "value": "GET"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 611.907145494953,
+      "sourceY": 607.3566607702761,
+      "targetX": 610.7847209578067,
+      "targetY": 662.1903415075453
+    },
+    {
+      "id": "vueflow__edge-0.4775828514502246-0.9217973752949947",
+      "type": "default",
+      "source": "0.4775828514502246",
+      "target": "0.9217973752949947",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.4775828514502246",
+        "type": "action",
+        "dimensions": {
+          "width": 179,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 521.4019766201793,
+          "y": 665.1903430295872,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.4775828514502246",
+              "position": "bottom",
+              "x": 86.38274433762744,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.4775828514502246",
+              "position": "top",
+              "x": 86.38274433762744,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 521.4019766201793,
+          "y": 665.1903430295872
+        },
+        "data": {
+          "label": "HTTP Request",
+          "configuration": {
+            "url": {
+              "id": "url",
+              "label": "URL",
+              "type": "select",
+              "options": [
+                "get_inventory",
+                "get_orders",
+                "add_lead_to_crm",
+                "create_offer",
+                "hold_inventory",
+                "release_inventory"
+              ],
+              "value": "create_offer"
+            },
+            "method": {
+              "id": "method",
+              "label": "Method",
+              "type": "select",
+              "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+              ],
+              "value": "GET"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.9217973752949947",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 526.2223041050701,
+          "y": 804.1764521772673,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.9217973752949947",
+              "position": "bottom",
+              "x": 74.07793758485776,
+              "y": 38.99992171683317,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.9217973752949947",
+              "position": "top",
+              "x": 74.07793758485776,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 526.2223041050701,
+          "y": 804.1764521772673
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "Buy with this code"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 610.7847209578067,
+      "sourceY": 710.1903137812764,
+      "targetX": 603.3002416899278,
+      "targetY": 801.1764506552254
+    },
+    {
+      "id": "vueflow__edge-0.9217973752949947-0.10673838032585747",
+      "type": "default",
+      "source": "0.9217973752949947",
+      "target": "0.10673838032585747",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.9217973752949947",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 526.2223041050701,
+          "y": 804.1764521772673,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.9217973752949947",
+              "position": "bottom",
+              "x": 74.07793758485776,
+              "y": 38.99992171683317,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.9217973752949947",
+              "position": "top",
+              "x": 74.07793758485776,
+              "y": -3.000001522041929,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 526.2223041050701,
+          "y": 804.1764521772673
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "Buy with this code"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.10673838032585747",
+        "type": "utility",
+        "dimensions": {
+          "width": 114,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 551.1273294436717,
+          "y": 924.6846392995334,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.10673838032585747",
+              "position": "bottom",
+              "x": 54.22647036154427,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.10673838032585747",
+              "position": "top",
+              "x": 54.22647036154427,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 551.1273294436717,
+          "y": 924.6846392995334
+        },
+        "data": {
+          "label": "Delay",
+          "configuration": {
+            "delay": {
+              "id": "delay",
+              "label": "Delay",
+              "type": "number",
+              "value": 24
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 603.3002416899278,
+      "sourceY": 849.1763738941004,
+      "targetX": 608.3537998052159,
+      "targetY": 921.6846868123474
+    },
+    {
+      "id": "vueflow__edge-0.10673838032585747-0.8014277378497972",
+      "type": "default",
+      "source": "0.10673838032585747",
+      "target": "0.8014277378497972",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.10673838032585747",
+        "type": "utility",
+        "dimensions": {
+          "width": 114,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 551.1273294436717,
+          "y": 924.6846392995334,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.10673838032585747",
+              "position": "bottom",
+              "x": 54.22647036154427,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.10673838032585747",
+              "position": "top",
+              "x": 54.22647036154427,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 551.1273294436717,
+          "y": 924.6846392995334
+        },
+        "data": {
+          "label": "Delay",
+          "configuration": {
+            "delay": {
+              "id": "delay",
+              "label": "Delay",
+              "type": "number",
+              "value": 24
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.8014277378497972",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 494.8901754532808,
+          "y": 1044.3894385076508,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.8014277378497972",
+              "position": "left",
+              "x": -2.9999524871859764,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.8014277378497972",
+              "position": "right",
+              "x": 191.0389161642987,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.8014277378497972",
+              "position": "top",
+              "x": 94.0155100152242,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 494.8901754532808,
+          "y": 1044.3894385076508
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "cart.purchased"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "equals"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "true"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 608.3537998052159,
+      "sourceY": 969.6846100512225,
+      "targetX": 591.905685468505,
+      "targetY": 1041.3894860204648
+    },
+    {
+      "id": "vueflow__edge-0.8014277378497972True-0.5089518494850644",
+      "type": "default",
+      "source": "0.8014277378497972",
+      "target": "0.5089518494850644",
+      "sourceHandle": "True",
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "True",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.8014277378497972",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 494.8901754532808,
+          "y": 1044.3894385076508,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.8014277378497972",
+              "position": "left",
+              "x": -2.9999524871859764,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.8014277378497972",
+              "position": "right",
+              "x": 191.0389161642987,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.8014277378497972",
+              "position": "top",
+              "x": 94.0155100152242,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 494.8901754532808,
+          "y": 1044.3894385076508
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "cart.purchased"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "equals"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "true"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.5089518494850644",
+        "type": "action",
+        "dimensions": {
+          "width": 179,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 357.5108421338976,
+          "y": 1151.2400310893931,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.5089518494850644",
+              "position": "bottom",
+              "x": 86.38274433762744,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.5089518494850644",
+              "position": "top",
+              "x": 86.38274433762744,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 357.5108421338976,
+          "y": 1151.2400310893931
+        },
+        "data": {
+          "label": "HTTP Request",
+          "configuration": {
+            "url": {
+              "id": "url",
+              "label": "URL",
+              "type": "select",
+              "options": [
+                "get_inventory",
+                "get_orders",
+                "add_lead_to_crm",
+                "create_offer",
+                "hold_inventory",
+                "release_inventory"
+              ],
+              "value": "release_inventory"
+            },
+            "method": {
+              "id": "method",
+              "label": "Method",
+              "type": "select",
+              "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+              ],
+              "value": "GET"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 491.8902229660948,
+      "sourceY": 1065.3894476399023,
+      "targetX": 446.89358647152505,
+      "targetY": 1148.2400786022072
+    },
+    {
+      "id": "vueflow__edge-0.8014277378497972False-0.48226549767816507",
+      "type": "default",
+      "source": "0.8014277378497972",
+      "target": "0.48226549767816507",
+      "sourceHandle": "False",
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "False",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.8014277378497972",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 494.8901754532808,
+          "y": 1044.3894385076508,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.8014277378497972",
+              "position": "left",
+              "x": -2.9999524871859764,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.8014277378497972",
+              "position": "right",
+              "x": 191.0389161642987,
+              "y": 18.000009132251574,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.8014277378497972",
+              "position": "top",
+              "x": 94.0155100152242,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 494.8901754532808,
+          "y": 1044.3894385076508
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "cart.purchased"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "equals"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "true"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.48226549767816507",
+        "type": "utility",
+        "dimensions": {
+          "width": 125,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 724.6591188997345,
+          "y": 1162.4874618874715,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.48226549767816507",
+              "position": "bottom",
+              "x": 59.49997297983298,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.48226549767816507",
+              "position": "top",
+              "x": 59.49997297983298,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 724.6591188997345,
+          "y": 1162.4874618874715
+        },
+        "data": {
+          "label": "Logger",
+          "configuration": {
+            "logLevel": {
+              "id": "logLevel",
+              "label": "Log Level",
+              "type": "select",
+              "options": [
+                "info",
+                "warn",
+                "error"
+              ],
+              "value": "info"
+            },
+            "message": {
+              "id": "message",
+              "label": "Log Message",
+              "type": "text",
+              "value": "dead lead"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 691.9290916175795,
+      "sourceY": 1065.3894476399023,
+      "targetX": 787.1590918795674,
+      "targetY": 1159.4875094002855
+    },
+    {
+      "id": "vueflow__edge-0.5089518494850644-0.15681468740859184",
+      "type": "default",
+      "source": "0.5089518494850644",
+      "target": "0.15681468740859184",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.5089518494850644",
+        "type": "action",
+        "dimensions": {
+          "width": 179,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 357.5108421338976,
+          "y": 1151.2400310893931,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.5089518494850644",
+              "position": "bottom",
+              "x": 86.38274433762744,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.5089518494850644",
+              "position": "top",
+              "x": 86.38274433762744,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 357.5108421338976,
+          "y": 1151.2400310893931
+        },
+        "data": {
+          "label": "HTTP Request",
+          "configuration": {
+            "url": {
+              "id": "url",
+              "label": "URL",
+              "type": "select",
+              "options": [
+                "get_inventory",
+                "get_orders",
+                "add_lead_to_crm",
+                "create_offer",
+                "hold_inventory",
+                "release_inventory"
+              ],
+              "value": "release_inventory"
+            },
+            "method": {
+              "id": "method",
+              "label": "Method",
+              "type": "select",
+              "options": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+              ],
+              "value": "GET"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.15681468740859184",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 360.7243937904913,
+          "y": 1277.3719336106983,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.15681468740859184",
+              "position": "bottom",
+              "x": 74.07803565456967,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.15681468740859184",
+              "position": "top",
+              "x": 74.07803565456967,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 360.7243937904913,
+          "y": 1277.3719336106983
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "thank you for your purchase"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 446.89358647152505,
+      "sourceY": 1196.2400018410822,
+      "targetX": 437.80242944506097,
+      "targetY": 1274.3719811235123
+    },
+    {
+      "id": "vueflow__edge-0.15681468740859184-0.909863749388637",
+      "type": "default",
+      "source": "0.15681468740859184",
+      "target": "0.909863749388637",
+      "sourceHandle": null,
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.15681468740859184",
+        "type": "action",
+        "dimensions": {
+          "width": 154,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 360.7243937904913,
+          "y": 1277.3719336106983,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.15681468740859184",
+              "position": "bottom",
+              "x": 74.07803565456967,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.15681468740859184",
+              "position": "top",
+              "x": 74.07803565456967,
+              "y": -2.9999524871859764,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 360.7243937904913,
+          "y": 1277.3719336106983
+        },
+        "data": {
+          "label": "Send Email",
+          "configuration": {
+            "recipient": {
+              "id": "recipient",
+              "label": "Recipient Email",
+              "type": "text",
+              "value": "data.email"
+            },
+            "subject": {
+              "id": "subject",
+              "label": "Subject",
+              "type": "text",
+              "value": "thank you for your purchase"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.909863749388637",
+        "type": "utility",
+        "dimensions": {
+          "width": 125,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 371.9718245885696,
+          "y": 1434.8359647837924,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.909863749388637",
+              "position": "bottom",
+              "x": 59.49997297983298,
+              "y": 38.999970751689126,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.909863749388637",
+              "position": "top",
+              "x": 59.49997297983298,
+              "y": -3.000050556897882,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 371.9718245885696,
+          "y": 1434.8359647837924
+        },
+        "data": {
+          "label": "Logger",
+          "configuration": {
+            "logLevel": {
+              "id": "logLevel",
+              "label": "Log Level",
+              "type": "select",
+              "options": [
+                "info",
+                "warn",
+                "error"
+              ],
+              "value": "info"
+            },
+            "message": {
+              "id": "message",
+              "label": "Log Message",
+              "type": "text",
+              "value": "Purchase completed"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 437.80242944506097,
+      "sourceY": 1322.3719043623873,
+      "targetX": 434.47179756840256,
+      "targetY": 1431.8359142268946
+    },
+    {
+      "id": "vueflow__edge-0.9459942002659527False-0.8115461688244775",
+      "type": "default",
+      "source": "0.9459942002659527",
+      "target": "0.8115461688244775",
+      "sourceHandle": "False",
+      "targetHandle": null,
+      "data": {},
+      "events": {},
+      "label": "False",
+      "markerEnd": "arrow",
+      "sourceNode": {
+        "id": "0.9459942002659527",
+        "type": "logic",
+        "dimensions": {
+          "width": 194,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 554.5,
+          "y": 96,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": "True",
+              "type": "source",
+              "nodeId": "0.9459942002659527",
+              "position": "left",
+              "x": -3,
+              "y": 18,
+              "width": 6,
+              "height": 6
+            },
+            {
+              "id": "False",
+              "type": "source",
+              "nodeId": "0.9459942002659527",
+              "position": "right",
+              "x": 191.0390625,
+              "y": 18,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.9459942002659527",
+              "position": "top",
+              "x": 94.015625,
+              "y": -3,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 554.5,
+          "y": 96
+        },
+        "data": {
+          "label": "Condition Check",
+          "configuration": {
+            "variable": {
+              "id": "variable",
+              "label": "Variable",
+              "type": "text",
+              "value": "data.item_stock"
+            },
+            "operator": {
+              "id": "operator",
+              "label": "Operator",
+              "type": "select",
+              "options": [
+                "equals",
+                "contains",
+                "starts_with",
+                "greater_than",
+                "less_than"
+              ],
+              "value": "greater_than"
+            },
+            "targetValue": {
+              "id": "targetValue",
+              "label": "Target Value",
+              "type": "text",
+              "value": "0"
+            }
+          }
+        },
+        "events": {}
+      },
+      "targetNode": {
+        "id": "0.8115461688244775",
+        "type": "utility",
+        "dimensions": {
+          "width": 125,
+          "height": 42
+        },
+        "computedPosition": {
+          "x": 797.853202392496,
+          "y": 200.04592618398755,
+          "z": 0
+        },
+        "handleBounds": {
+          "source": [
+            {
+              "id": null,
+              "type": "source",
+              "nodeId": "0.8115461688244775",
+              "position": "bottom",
+              "x": 59.49995357534487,
+              "y": 39.000001519636164,
+              "width": 6,
+              "height": 6
+            }
+          ],
+          "target": [
+            {
+              "id": null,
+              "type": "target",
+              "nodeId": "0.8115461688244775",
+              "position": "top",
+              "x": 59.49995357534487,
+              "y": -2.999997357853142,
+              "width": 6,
+              "height": 6
+            }
+          ]
+        },
+        "selected": false,
+        "dragging": false,
+        "resizing": false,
+        "initialized": false,
+        "isParent": false,
+        "position": {
+          "x": 797.853202392496,
+          "y": 200.04592618398755
+        },
+        "data": {
+          "label": "Logger",
+          "configuration": {
+            "logLevel": {
+              "id": "logLevel",
+              "label": "Log Level",
+              "type": "select",
+              "options": [
+                "info",
+                "warn",
+                "error"
+              ],
+              "value": "warn"
+            },
+            "message": {
+              "id": "message",
+              "label": "Log Message",
+              "type": "text",
+              "value": "Out of inventory"
+            }
+          }
+        },
+        "events": {}
+      },
+      "sourceX": 751.5390625,
+      "sourceY": 117,
+      "targetX": 860.3531559678408,
+      "targetY": 197.0459288261344
+    }
+  ]
+}

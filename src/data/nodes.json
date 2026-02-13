@@ -1,0 +1,200 @@
+[
+  {
+    "id": "1",
+    "type": "trigger",
+    "data": {
+      "label": "Webhook Trigger",
+      "configuration": {
+        "event": {
+          "id": "event",
+          "label": "Event",
+          "type": "select",
+          "options": [
+            "lead_created",
+            "lead_updated",
+            "lead_deleted",
+            "cart_created",
+            "cart_updated",
+            "cart_deleted",
+            "order_created",
+            "order_updated",
+            "order_deleted"
+          ],
+          "value": "lead_created"
+        }
+      }
+    }
+  },
+  {
+    "id": "2",
+    "type": "action",
+    "data": {
+      "label": "Send Email",
+      "configuration": {
+        "recipient": {
+          "id": "recipient",
+          "label": "Recipient Email",
+          "type": "text",
+          "value": "user@example.com"
+        },
+        "subject": {
+          "id": "subject",
+          "label": "Subject",
+          "type": "text",
+          "value": "Welcome!"
+        }
+      }
+    }
+  },
+  {
+    "id": "2b",
+    "type": "action",
+    "data": {
+      "label": "Send SMS",
+      "configuration": {
+        "recipient": {
+          "id": "recipient",
+          "label": "Recipient Phone Number",
+          "type": "text",
+          "value": "0000000000"
+        },
+        "message": {
+          "id": "message",
+          "label": "Message",
+          "type": "text",
+          "value": "Welcome!"
+        }
+      }
+    }
+  },
+  {
+    "id": "2c",
+    "type": "action",
+    "data": {
+      "label": "HTTP Request",
+      "configuration": {
+        "url": {
+          "id": "url",
+          "label": "URL",
+          "type": "select",
+          "options": [
+            "get_inventory",
+            "get_orders",
+            "add_lead_to_crm",
+            "create_offer",
+            "hold_inventory",
+            "release_inventory"
+          ],
+          "value": "get_inventory"
+        },
+        "method": {
+          "id": "method",
+          "label": "Method",
+          "type": "select",
+          "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+          ],
+          "value": "GET"
+        }
+      }
+    }
+  },
+  {
+    "id": "3",
+    "type": "logic",
+    "data": {
+      "label": "Condition Check",
+      "configuration": {
+        "variable": {
+          "id": "variable",
+          "label": "Variable",
+          "type": "text",
+          "value": "status"
+        },
+        "operator": {
+          "id": "operator",
+          "label": "Operator",
+          "type": "select",
+          "options": [
+            "equals",
+            "contains",
+            "starts_with",
+            "greater_than",
+            "less_than"
+          ],
+          "value": "equals"
+        },
+        "targetValue": {
+          "id": "targetValue",
+          "label": "Target Value",
+          "type": "text",
+          "value": "active"
+        }
+      }
+    }
+  },
+  {
+    "id": "3b",
+    "type": "logic",
+    "data": {
+      "label": "Cart Check",
+      "configuration": {
+        "event": {
+          "id": "event",
+          "label": "Event",
+          "type": "select",
+          "options": [
+            "cart_created",
+            "cart_updated",
+            "cart_deleted"
+          ],
+          "value": "cart_created"
+        }
+      }
+    }
+  },
+  {
+    "id": "4",
+    "type": "utility",
+    "data": {
+      "label": "Logger",
+      "configuration": {
+        "logLevel": {
+          "id": "logLevel",
+          "label": "Log Level",
+          "type": "select",
+          "options": [
+            "info",
+            "warn",
+            "error"
+          ],
+          "value": "info"
+        },
+        "message": {
+          "id": "message",
+          "label": "Log Message",
+          "type": "text",
+          "value": "Workflow step completed."
+        }
+      }
+    }
+  },
+  {
+    "id": "5",
+    "type": "utility",
+    "data": {
+      "label": "Delay",
+      "configuration": {
+        "delay": {
+          "id": "delay",
+          "label": "Delay",
+          "type": "number",
+          "value": 0
+        }
+      }
+    }
+  }
+]
